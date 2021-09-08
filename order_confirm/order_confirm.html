@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../public/css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="./order_confirm.css"/>
+		<title>订单确认</title>
+	</head>
+	<body>
+		<!-- header -->
+		<div class="tonglan header">
+			<div class="w header-wrapper">
+				<div class="header-left">
+					<ul>
+						<li>
+							<a href="../home/index.html">长虹官网</a>
+						</li>
+						<li><a href="">关于长虹</a></li>
+						<li><a href="">投资者关系</a></li>
+						<li><a href="">商务合作</a></li>
+						<li>
+							<a href="">
+								<img src="../public/images/en_icon.png" >
+								English
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header-right">
+					<div class="header-right-login">
+						<a class="login" href="../login/login.html">登录</a>
+						<a href="../register/register.html">注册</a>
+					</div>
+					<div class="header-right-nav">
+						<ul>
+							<li>
+								<a href="../address/address.html">
+									<img src="../public/images/home-toolbar-login_03.png" >
+									我的长虹
+									
+								</a>
+								<div class="header-right-sub1">
+									<div class="sub1-top">
+										<img src="../public/images/tool-myCQ-my-photo_03.jpg" >
+										<span>你好请登录</span>
+										<span>账户设置</span>
+									</div>
+									<div class="sub2-bottom">
+										<ul>
+											<li><a href="">我的订单</a></li>
+											<li><a href="">我的预约</a></li>
+											<li><a href="">家电管家</a></li>
+											<li><a href="">服务记录</a></li>
+											<li><a href="">我的收藏</a></li>
+											
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="">
+									<img src="../public/images/home-toolbar-news_05.png" >
+									虹创有品
+								</a>
+								<div class="sub3">
+									<img src="../public/images/cnhome-hcyp-ewm.jpg" >
+								</div>
+							</li>
+							<li>
+								<a href="../cart/cart.html">
+									<img src="../public/images/home-toolbar-shoppingcar_03.png" >
+									购物车
+								</a>
+								<div class="sub4">
+									<p>购物车中还没有商品,赶紧选购吧</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+		</div>
+		<!-- contion -->
+		<div class="w info-wrapper">
+			<div class="order-info-name-wrapper">
+				<div class="order-info-name-hd">
+					<h4>收货人信息</h4>
+				</div>
+				<div class="order-info-name-bd">
+					<div class="info-select">
+						<select class="select">
+							<!-- <option value ="">
+								 <span class="name">-</span>
+								<span class="region">-</span>
+								<span class="phone">-</span>
+								</option> -->
+						
+						</select>
+					</div>
+					<div class="info-update">修改</div>
+					<div class="info-add">
+						<img src="images/car-icon11.png" >新增收货地址
+					</div>
+					
+				</div>
+			</div>
+			<!-- 新增修改 -->
+			<!-- <div class="edit-dialog-wrapper show"> -->
+			<div class="edit-dialog-wrapper ">
+				<div class="edit-dialog">
+					<form name="addressEdit">
+						<input type="hidden" name="id" value="0"  />
+						<div class="dialog-header">
+							<h2>—————— 收货地址管理 ——————</h2>
+						</div>
+						<div class="form-item-group">
+							<label for="">收货人：</label>
+							<input type="text" name="receiveName" />
+						</div>
+						<div class="form-item-group">
+							<label for="">收货人地址：</label>
+							<select class="region-province"></select> - 
+							<select class="region-city"></select> - 
+							<select class="region-area"></select> - 
+							<select class="region-street"></select>
+						</div>
+						<div class="form-item-group">
+							<label for="">收货人详细地址：</label>
+							<input type="text" name="receiveDetail" />
+						</div>
+						<div class="form-item-group">
+							<label for="">手机号码：</label>
+							<input type="text" name="receivePhone" />
+						</div>
+						<div class="form-item-group">
+							<label for="">电子邮箱：</label>
+							<input type="text" name="receiveEmail" />
+						</div>
+						<div class="dialog-footer">
+							<button type="button" class="btn-ok">确定</button>
+							<button type="button" class="btn-cancel">取消</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- 支付方式 -->
+			<div class="order-info-pay-wrapper">
+				<div class="order-info-pay-hd">
+					<h4>支付方式</h4>
+				</div>
+				<div class="order-info-pay-bd">
+					<div>
+						<input type="radio" name="radio" id="" value="" checked/>
+						银行卡快捷支付
+					</div>
+					<div>
+						<input type="radio" name="radio" id="" value="" />
+						手机支付
+					</div>
+				</div>
+			</div>
+			<!-- 送货时间 -->
+			<div class="order-info-time-wrapper">
+				<div class="order-info-time-hd">
+					<h4>送货时间</h4>
+				</div>
+				<div class="order-info-time-bd">
+					<div>
+						<div>
+							<p>不限时配送</p>
+							<p>(周一至周日)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 发票信息 -->
+			<div class="order-info-receipt-wrapper">
+				<div class="order-info-receipt-hd">
+					<h4>发票信息</h4>
+					<div>
+						<span class="active">普通发票</span>
+						<span>增值税发票</span>
+					</div>
+				</div>
+				<div class="order-info-receipt-bd">
+					<div class="show">
+						<div>
+							<input type="radio" name="radio-xxk" id="" value="" checked=""/> 个人
+							<input type="radio" name="radio-xxk" id="" value="" /> 单位
+						</div>
+						<div class="radio-div">
+							<span>发票抬头：个人</span>
+							<span>发票内容：商品明细</span>
+						</div>
+					</div>
+					<div class=""></div>
+				</div>
+			</div>
+			<!-- 购物清单 -->
+			<div class="order-info-cart-wrapper">
+				<div class="order-info-cart-hd">
+					<h4>购物清单</h4>
+					<a href="../cart/cart.html">返回修改购物车</a>
+				</div>
+				<div class="order-info-cart-hd">
+					<h4>官方旗舰店</h4>
+					<a style="color: #F12020;">由官方旗舰店配送</a>
+				</div>
+				<div class="order-info-cart-hd"></div>
+				<div class="order-info-cart-bd">
+					<div class="cart1">
+						<div style="width: 710px;">
+							<img src="images/P020210525316803294949.jpg" >
+							<span>美菱M鲜生BCD-506WQ3S十字对开冰箱</span>
+						</div>
+						<div>
+							<span>8799.00 x 4</span>
+						</div>
+						<div>
+							<span>有货</span>
+						</div>
+						<div>
+							<span>35196.00元</span>
+						</div>
+					</div>
+					<div class="cart1">
+						<div style="width: 710px;">
+							<img src="images/P020210525329778606616.jpg" >
+							<span>65英寸 智能AI交互真8K电视 65D8K</span>
+						</div>
+						<div>
+							<span>7299.00 x 2</span>
+						</div>
+						<div>
+							<span>有货</span>
+						</div>
+						<div>
+							<span>14598.00元</span>
+						</div>
+					</div>
+					<div class="cart1">
+						<div style="width: 710px;">
+							<img src="images/P020210525624439782671.jpg" >
+							<span>CHiQ 75英寸 AI极智屏电视 75Q7S</span>
+						</div>
+						<div>
+							<span>8997.00 x 10</span>
+						</div>
+						<div>
+							<span>有货</span>
+						</div>
+						<div>
+							<span>89970.00元</span>
+						</div>
+					</div>
+					<!-- 结算 -->
+					<div class=" pay">
+						<div class="pay-info">
+							<p>
+								<label>商品数量：</label>
+								<span>16 件</span>
+							</p>
+							<p>
+								<label>商品总金额：</label>
+								<span>139764.00元</span>
+							</p>
+							<p>
+								<label>优惠券折扣：</label>
+								<span>-0.00元</span>
+							</p>
+							<p>
+								<label>积分抵扣：</label>
+								<span>-0.00元</span>
+							</p>
+							<p>
+								<label>会员抵扣金额：</label>
+								<span>-0.00元</span>
+							</p>
+							<p>
+								<label>运费：</label>
+								<span>0.00元</span>
+							</p>
+							<div class="total-pay">
+								应付金额：
+								<span>139764.00元</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="order-info-cart-ft">
+					<div>
+						<span>张三</span>
+						<span>17667891234</span>
+					</div>
+					<div>
+						<a href="../pay/pay.html">提交订单</a>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		<!-- footer -->
+		<iframe src="../footer/footer.html" width="100%" height="615px"></iframe>
+		<!-- js -->
+		<script src="../public/js/js-cookie.js"></script>
+		<script src="./order_confirm.js"></script>
+		<script src="../public/js/regions.js"></script>
+		<script src="../public/js/regions_picker.js"></script>
+	</body>
+</html>
